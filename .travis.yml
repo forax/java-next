@@ -1,0 +1,24 @@
+sudo: false
+
+language: java
+jdk: openjdk-ea
+
+install:
+- java --version
+
+script:
+- chmod u+x ./build.sh
+- ./build.sh
+
+#before_deploy:
+#  - cd target
+#  - tar zcvf jdk-11-lworld.tar.gz
+
+#deploy:
+#  provider: releases
+#  api_key:
+#    secure: "???"
+#  file: ???.tar.gz
+#  skip_cleanup: true
+#  on:
+#    tags: true
