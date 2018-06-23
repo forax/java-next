@@ -6,8 +6,10 @@
 ## build the JDK
 cd valhalla
 bash configure --with-boot-jdk=$JAVA_HOME --disable-warnings-as-errors
+echo "make"
+LOG=cmdlines make
 echo "make images"
-LOG=cmdlines make images
+make images
 cd ..
 
 ## rename builded jdk
