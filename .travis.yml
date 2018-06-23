@@ -3,12 +3,15 @@ sudo: false
 language: java
 jdk: openjdk10
 
+before_install:
+  - unset _JAVA_OPTIONS
+
 install:
-- java --version
-- bash ./install.sh
+  - java --version
+  - bash ./install.sh
 
 script:
-- bash ./build.sh
+  - bash ./build.sh
 
 #before_deploy:
 #  - cd target
