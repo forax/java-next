@@ -13,10 +13,12 @@ install:
   - sudo apt-get install libx11-dev libxext-dev libxrender-dev libxtst-dev libxt-dev
   - sudo apt-get install libasound2-dev
   - sudo apt-get install libffi-dev
-  - bash ./install.sh
+  - chmod u+x ./install.sh 
+  - ./install.sh
 
 script:
-  - travis_wait 30 bash ./build.sh
+  - chmod u+x ./build.sh
+  - ./build.sh
 
 #before_deploy:
 #  - cd target
