@@ -5,7 +5,7 @@
 
 ## build the JDK
 cd valhalla
-bash configure --with-boot-jdk=$JAVA_HOME --disable-warnings-as-errors
+bash configure --with-boot-jdk=$JAVA_HOME --with-native-debug-symbols=none --disable-warnings-as-errors
 echo "make hotspot"
 LOG=cmdlines make hotspot
 echo "make"
