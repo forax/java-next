@@ -16,7 +16,7 @@ install:
   - bash ./install.sh
 
 script:
-  - bash ./build.sh
+  - travis_wait 30 bash ./build.sh
 
 #before_deploy:
 #  - cd target
