@@ -14,11 +14,9 @@ echo "make images"
 make images
 cd ..
 
-## rename builded jdk
-export JAVA_HOME=valhalla/build/linux-x86_64-normal-server-release/jdk
+## copy built jdk
+cp -R valhalla/build/linux-x86_64-normal-server-release/images/jdk/ jdk-11-lworld
 
-## display version
-$JAVA_HOME/bin/java -version
 
 
 
