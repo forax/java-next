@@ -5,10 +5,10 @@ jdk: openjdk-ea
 
 install:
 - java --version
+- bash ./install.sh
 
 script:
-- chmod u+x ./build.sh
-- ./build.sh
+- bash ./build.sh
 
 #before_deploy:
 #  - cd target
