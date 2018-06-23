@@ -6,6 +6,11 @@
 ## build the JDK
 cd valhalla
 bash configure --with-boot-jdk=$JAVA_HOME --disable-warnings-as-errors
+echo "make hotspot"
+make hotspot
+echo "make"
+make
+echo "make images"
 make images
 cd ..
 
