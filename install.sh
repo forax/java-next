@@ -1,10 +1,12 @@
 #!/bin/bash
 
 ## env
-[ -z "$LATEST_LWORD_COMMIT" ] && export LATEST_LWORD_COMMIT=e5cec7364448
+[ -z "$LATEST_LWORD_COMMIT" ] && export LATEST_LWORD_COMMIT=8b2ca4fdb101
 
 ## download LWORD branch
-#wget http://hg.openjdk.java.net/valhalla/valhalla/archive/$LATEST_LWORD_COMMIT.tar.bz2
+if [ ! -f "$LATEST_LWORD_COMMIT.tar.bz2" ]; then
+   wget http://hg.openjdk.java.net/valhalla/valhalla/archive/$LATEST_LWORD_COMMIT.tar.bz2   
+fi
 
 ## unpack
 bunzip2 $LATEST_LWORD_COMMIT.tar.bz2
