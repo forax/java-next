@@ -6,6 +6,9 @@ jdk: openjdk10
 before_install:
   - unset _JAVA_OPTIONS
 
+env:
+  - LATEST_LWORD_COMMIT="ad6949f382f4" 
+
 install:
   - sudo apt-get install build-essential
   - sudo apt-get install libfreetype6-dev
@@ -27,7 +30,7 @@ deploy:
   provider: releases
   api_key:
     secure: "R5ORaE8RpahzmQJrmu10ffhzduKHLMH50cQgdc7d6yZZ3yTyQHNcb/TWtqrjTrusfMkItGI/ydY/64wFBq9EiNbM9XCBQrqnRinCQ1+5LS60K8ZuHMDc7H9gQqIKi091rXtBl3YZDBJZOEHH+FsaJIf3hThYyPhug3Iyzd1/9mqUJr8xie8uiw7RJaHjp0c3zus1aOnHJUAz3L+EzM07IM6o/3IdgtYCDPZgLfNLTJg7L5d/R5x7i0j2QIVO8tFYalQQE/UC9E0EazRIyy5habIMRzdBrlcWdE3q4gFfXkk4S6iFRJ4y6Hfn+iaLCTRcamSyrjYVSGgv0HngEg83WYk0t1Jwm/OI2yCjCvKIhPyONrGlfHc6/H9IiE0Mks6cLoGcL+f4OrxpeKEv17kD79NMcif8EATrL+W6MXnkZ1bw6Mng7mM1t6cXi5uOF3Y3i0u2ELxXTHgpKPnYVFO8AZ9wPE8Tl72inrmEJPzUXoXeN1/DV1s4mbQemXVs8YPLYfuOB9lho5y9wJOLZgH+n8WfNA52SvyCr/cnJg/4Hj+KVfw56/RfyrlY4GqzXvivFuBovP3JmTscWDIZc2zcn7oEOmk2BRdim940CG5t/PHEj4YSUyR0SugotkBEP61qY4IgzRGqgG9Dy9N6VR59ZAYw2i/bpOZbeSp34tTDM64="
+  name: $LATEST_LWORD_COMMIT
   file: jdk-11-lworld.tar.gz
   skip_cleanup: true
-  on:
-    tags: true
+  
