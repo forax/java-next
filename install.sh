@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## env
-[ -z "$LATEST_LWORD_COMMIT" ] && export LATEST_LWORD_COMMIT=8b2ca4fdb101
+[ -z "$LATEST_LWORD_COMMIT" ] && export LATEST_LWORD_COMMIT=ad6949f382f4
 
 ## download LWORD branch
 if [ ! -f "$LATEST_LWORD_COMMIT.tar.bz2" ]; then
