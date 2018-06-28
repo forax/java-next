@@ -33,4 +33,6 @@ deploy:
   name: $LATEST_LWORD_COMMIT
   file: jdk-11-lworld.tar.gz
   skip_cleanup: true
+  on:
+    tags: false   # avoid loop
   
