@@ -7,7 +7,7 @@ before_install:
   - unset _JAVA_OPTIONS
 
 env:
-  - LATEST_LWORD_COMMIT="32bf267ee453" 
+  - LATEST_LWORD_COMMIT="1b791424da6b" 
 
 install:
   - sudo apt-get install build-essential
