@@ -8,9 +8,13 @@ before_install:
 
 env:
   - LATEST_COMMIT="7405ce3f56ee"
-  - HG_REPOSITORY="valhalla"
-  - REPOSITORY="valhalla"
-  - ARTIFACT="jdk-11-lworld" 
+    HG_REPOSITORY="valhalla"
+    REPOSITORY="valhalla"
+    ARTIFACT="jdk-11-lworld"
+  - LATEST_COMMIT="36a1c43285a6"
+    HG_REPOSITORY="amber"
+    REPOSITORY="amber"
+    ARTIFACT="jdk-12-switch"
 
 install:
   - sudo apt-get install build-essential
