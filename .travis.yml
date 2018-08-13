@@ -11,7 +11,7 @@ env:
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-11-lworld"
-  - LATEST_COMMIT="006f5c0da463"
+  - LATEST_COMMIT="058819822e9f"
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-11-loom"
