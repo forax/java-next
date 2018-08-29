@@ -15,10 +15,10 @@ env:
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-12-loom"
-  - LATEST_COMMIT="de2d2d3d1824"
+  - LATEST_COMMIT="7b6b1ca65fb3"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-12-datum"
+    ARTIFACT="jdk-12-jep334"
 
 install:
   - sudo apt-get install build-essential
