@@ -7,18 +7,18 @@ before_install:
   - unset _JAVA_OPTIONS
 
 env:
-  - LATEST_COMMIT="4fb4a8f09092"
+  - LATEST_COMMIT="2194ea33af93"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
-    ARTIFACT="jdk-11-lworld"
-  - LATEST_COMMIT="0f91391e2926"
+    ARTIFACT="jdk-12-lworld"
+  - LATEST_COMMIT="6e085e6738a7"
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
-    ARTIFACT="jdk-11-loom"
-  - LATEST_COMMIT="7afd61192cd4"
+    ARTIFACT="jdk-12-loom"
+  - LATEST_COMMIT="de2d2d3d1824"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-12-switch"
+    ARTIFACT="jdk-12-datum"
 
 install:
   - sudo apt-get install build-essential
