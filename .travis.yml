@@ -15,10 +15,10 @@ env:
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-12-loom"
-  - LATEST_COMMIT="7b6b1ca65fb3"
+  - LATEST_COMMIT="f0b08cefdef3"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-12-jep334"
+    ARTIFACT="jdk-12-condy-folding"
 
 install:
   - sudo apt-get install build-essential
