@@ -5,7 +5,11 @@
 
 ## build the JDK
 cd $REPOSITORY
-bash configure --with-boot-jdk=$JAVA_HOME --with-native-debug-symbols=none --disable-warnings-as-errors --with-version-pre=$LATEST_COMMIT
+bash configure --with-boot-jdk=$JAVA_HOME \
+               --with-native-debug-symbols=none \
+               --disable-warnings-as-errors \
+               --with-version-opt=$LATEST_COMMIT \
+               --with-version-pre=$REPOSITORY
 echo "make hotspot"
 LOG=cmdlines make hotspot
 echo "make"
