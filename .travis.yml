@@ -7,7 +7,7 @@ before_install:
   - unset _JAVA_OPTIONS
 
 env:
-  - LATEST_COMMIT="142e4a2255f4"
+  - LATEST_COMMIT="9b12d9f3dabb"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-12-lworld"
@@ -15,10 +15,10 @@ env:
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-12-loom"
-  - LATEST_COMMIT="09b17394321d"
+  - LATEST_COMMIT="cac8618a27ec"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-12-condy-folding"
+    ARTIFACT="jdk-12-concise-method"
 
 install:
   - sudo apt-get install build-essential
