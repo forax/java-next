@@ -7,11 +7,11 @@ before_install:
   - unset _JAVA_OPTIONS
 
 env:
-  - LATEST_COMMIT="e7216b29214d"
+  - LATEST_COMMIT="2045f7495341"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-12-lworld"
-  - LATEST_COMMIT="9abc3d4b51bf"
+  - LATEST_COMMIT="a75f49a7ba30"
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-12-loom"
