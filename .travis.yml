@@ -28,13 +28,16 @@ env:
     REPOSITORY="amber"
     ARTIFACT="jdk-12-amber"
 
+before-install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install autoconf                          ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install build-essential         ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libfreetype6-dev        ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libcups2-dev            ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libx11-dev libxext-dev libxrender-dev libxtst-dev libxt-dev       ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libasound2-dev          ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libffi-dev              ; fi
+  
 install:
-  - sudo apt-get install build-essential
-  - sudo apt-get install libfreetype6-dev
-  - sudo apt-get install libcups2-dev
-  - sudo apt-get install libx11-dev libxext-dev libxrender-dev libxtst-dev libxt-dev
-  - sudo apt-get install libasound2-dev
-  - sudo apt-get install libffi-dev
   - chmod u+x ./install.sh 
   - ./install.sh
 
