@@ -21,7 +21,7 @@ cd ..
 ## copy built jdk
 # The image folder has changed recently, see http://hg.openjdk.java.net/jdk/jdk/rev/9777d724ace8
 # wait until this change has been propagated to all repos
-cp -R $REPOSITORY/build/linux-x86_64-normal-server-release/images/jdk/ $ARTIFACT || cp -R $REPOSITORY/build/linux-x86_64-server-release/images/jdk/ $ARTIFACT
+cp -R $REPOSITORY/build/linux-x86_64-normal-server-release/images/jdk/ $ARTIFACT || cp -R $REPOSITORY/build/linux-x86_64-server-release/images/jdk/ $ARTIFACT || cp -R $REPOSITORY/build/macosx-x86_64-normal-server-release/images/jdk/ $ARTIFACT || cp -R $REPOSITORY/build/macosx-x86_64-server-release/images/jdk/ $ARTIFACT
 
 
 
