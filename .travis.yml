@@ -19,7 +19,7 @@ env:
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-12-nestmates"
-  - LATEST_COMMIT="eeeb45c9ba8e"
+  - LATEST_COMMIT="69489b45d379"
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-12-loom"
