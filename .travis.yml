@@ -1,7 +1,7 @@
 sudo: true
 
 language: java
-jdk: openjdk11
+jdk: openjdk12
 
 before_install:
   - unset _JAVA_OPTIONS
@@ -14,19 +14,19 @@ env:
   - LATEST_COMMIT="c813f5c864a2"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
-    ARTIFACT="jdk-12-lworld"
-  - LATEST_COMMIT="ec8dd2a70657"
-    HG_REPOSITORY="valhalla"
-    REPOSITORY="valhalla"
-    ARTIFACT="jdk-12-nestmates"
-  - LATEST_COMMIT="69489b45d379"
-    HG_REPOSITORY="loom"
-    REPOSITORY="loom"
-    ARTIFACT="jdk-12-loom"
-  - LATEST_COMMIT="ea91648fec9d"
+    ARTIFACT="jdk-13-lworld"
+  - LATEST_COMMIT="961c94644652"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-12-amber"
+    ARTIFACT="jdk-13-concise-method"
+  - LATEST_COMMIT="c92e170e24df"
+    HG_REPOSITORY="loom"
+    REPOSITORY="loom"
+    ARTIFACT="jdk-13-loom"
+  - LATEST_COMMIT="af46c16d496e"
+    HG_REPOSITORY="amber"
+    REPOSITORY="amber"
+    ARTIFACT="jdk-13-amber"
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install build-essential         ; fi
