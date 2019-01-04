@@ -19,7 +19,7 @@ env:
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
     ARTIFACT="jdk-13-concise-method"
-  - LATEST_COMMIT="c92e170e24df"
+  - LATEST_COMMIT="d6017ec2f4a9"
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-13-loom"
