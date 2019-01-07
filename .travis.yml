@@ -11,7 +11,7 @@ os:
   - osx
 
 env:
-  - LATEST_COMMIT="c813f5c864a2"
+  - LATEST_COMMIT="09d9f9085910"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-13-lworld"
