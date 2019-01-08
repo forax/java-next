@@ -11,7 +11,7 @@ os:
   - osx
 
 env:
-  - LATEST_COMMIT="09d9f9085910"
+  - LATEST_COMMIT="530ea41023b2"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-13-lworld"
@@ -19,7 +19,7 @@ env:
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
     ARTIFACT="jdk-13-concise-method"
-  - LATEST_COMMIT="b2a78e16910f"
+  - LATEST_COMMIT="d106b8016296"
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-13-loom"
