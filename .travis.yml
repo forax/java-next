@@ -11,19 +11,19 @@ os:
   - osx
 
 env:
-  - LATEST_COMMIT="530ea41023b2"
+  - LATEST_COMMIT="000d494dc5cb"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-13-lworld"
-  - LATEST_COMMIT="961c94644652"
+  - LATEST_COMMIT="d9ec63d35a6f"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
     ARTIFACT="jdk-13-concise-method"
-  - LATEST_COMMIT="d106b8016296"
+  - LATEST_COMMIT="699000dfcf97"
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-13-loom"
-  - LATEST_COMMIT="af46c16d496e"
+  - LATEST_COMMIT="a3dbeab8e76d"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
     ARTIFACT="jdk-13-amber"
