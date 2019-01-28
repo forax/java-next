@@ -11,19 +11,19 @@ os:
   - osx
 
 env:
-  - LATEST_COMMIT="349408e9aa4c"
+  - BRANCH="lworld"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-13-lworld"
-  - LATEST_COMMIT="d9ec63d35a6f"
+  - BRANCH="concise-method-declarations"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
     ARTIFACT="jdk-13-concise-method"
-  - LATEST_COMMIT="cdcb568ac18a"
+  - BRANCH="fibers"
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-13-loom"
-  - LATEST_COMMIT="a3dbeab8e76d"
+  - BRANCH="amber-demo-II"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
     ARTIFACT="jdk-13-amber"
@@ -37,6 +37,8 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libffi-dev              ; fi
   
 install:
+  - export LATEST_COMMIT=`hg id -r tip http://hg.openjdk.java.net/$HG_REPOSITORY/$REPOSITORY#$BRANCH`
+  - echo $LATEST_COMMIT
   - chmod u+x ./install.sh 
   - ./install.sh
 
