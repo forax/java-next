@@ -38,7 +38,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libffi-dev              ; fi
   
 install:
-  - export LATEST_COMMIT=`hg id -r tip http://hg.openjdk.java.net/$HG_REPOSITORY/$REPOSITORY#$BRANCH`
+  - export LATEST_COMMIT=`hg id -r $BRANCH http://hg.openjdk.java.net/$HG_REPOSITORY/$REPOSITORY`
   - echo $LATEST_COMMIT
   - chmod u+x ./install.sh 
   - ./install.sh
