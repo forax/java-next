@@ -24,10 +24,10 @@ env:
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-13-loom"
-  - BRANCH="amber-demo-II"
+  - BRANCH="records-and-sealed"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-13-amber"
+    ARTIFACT="jdk-13-record"
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install build-essential         ; fi
