@@ -15,19 +15,19 @@ env:
   - BRANCH="lworld"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
-    ARTIFACT="jdk-13-lworld"
+    ARTIFACT="jdk-14-lworld"
   - BRANCH="intrinsics-project"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-13-intrinsic"
+    ARTIFACT="jdk-14-intrinsic"
   - BRANCH="fibers"
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
-    ARTIFACT="jdk-13-loom"
+    ARTIFACT="jdk-14-loom"
   - BRANCH="records-and-sealed"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-13-record"
+    ARTIFACT="jdk-14-record"
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install build-essential         ; fi
