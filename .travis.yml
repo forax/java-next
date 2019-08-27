@@ -46,7 +46,7 @@ install:
   - if [[ "$SCM" == "hg" ]]; then chmod u+x ./install.sh                                                                        ; fi
   - if [[ "$SCM" == "hg" ]]; then ./install.sh                                                                                  ; fi
   - if [[ "$SCM" == "git" ]]; then git clone https://github.com/openjdk/$REPOSITORY.git                                         ; fi
-  - if [[ "$SCM" == "git" ]]; then git checkout $BRANCH                                                                         ; fi                                                                        ; fi
+  - if [[ "$SCM" == "git" ]]; then git checkout $BRANCH                                                                         ; fi
 
 script:
   - chmod u+x ./build.sh
