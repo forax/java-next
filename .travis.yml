@@ -16,18 +16,21 @@ env:
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-14-lworld"
+    SCM="hg"
   - BRANCH="intrinsics-project"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
     ARTIFACT="jdk-14-intrinsic"
+    SCM="hg"
   - BRANCH="fibers"
-    HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-14-loom"
+    SCM="git"
   - BRANCH="records-and-sealed"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
     ARTIFACT="jdk-14-record"
+    SCM="hg"
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install build-essential         ; fi
@@ -38,10 +41,12 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libffi-dev              ; fi
   
 install:
-  - export LATEST_COMMIT=`hg id -r $BRANCH http://hg.openjdk.java.net/$HG_REPOSITORY/$REPOSITORY`
-  - echo $LATEST_COMMIT
-  - chmod u+x ./install.sh 
-  - ./install.sh
+  - if [[ "$SCM" == "hg" ]]; then export LATEST_COMMIT=`hg id -r $BRANCH http://hg.openjdk.java.net/$HG_REPOSITORY/$REPOSITORY` ; fi
+  - if [[ "$SCM" == "hg" ]]; then echo $LATEST_COMMIT                                                                           ; fi
+  - if [[ "$SCM" == "hg" ]]; then chmod u+x ./install.sh                                                                        ; fi
+  - if [[ "$SCM" == "hg" ]]; then ./install.sh                                                                                  ; fi
+  - if [[ "$SCM" == "git" ]]; then git clone https://github.com/openjdk/$REPOSITORY.git                                         ; fi
+  - if [[ "$SCM" == "git" ]]; then git checkout $BRANCH                                                                         ; fi                                                                        ; fi
 
 script:
   - chmod u+x ./build.sh
