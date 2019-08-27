@@ -48,7 +48,7 @@ install:
   - if [[ "$SCM" == "git" ]]; then git clone https://github.com/openjdk/$REPOSITORY.git                                         ; fi
   - if [[ "$SCM" == "git" ]]; then cd $REPOSITORY                                                                               ; fi
   - if [[ "$SCM" == "git" ]]; then git checkout $BRANCH                                                                         ; fi
-  - if [[ "$SCM" == "git" ]]; then export LATEST_COMMIT=`git rev-parse HEAD`                                                    ; fi
+  - if [[ "$SCM" == "git" ]]; then export LATEST_COMMIT=`git describe --tags`                                                   ; fi
   - if [[ "$SCM" == "git" ]]; then cd ..                                                                                        ; fi
 
 script:
