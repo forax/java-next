@@ -8,6 +8,7 @@ cd $REPOSITORY
 bash configure --with-boot-jdk=$JAVA_HOME \
                --with-native-debug-symbols=none \
                --disable-warnings-as-errors \
+               --with-jvm-features=-shenandoahgc \
                --with-version-opt=$LATEST_COMMIT \
                --with-version-pre=$REPOSITORY
 echo "make hotspot"
