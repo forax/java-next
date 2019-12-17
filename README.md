@@ -3,10 +3,10 @@ Binary builds for several OpenJDK project
 
 Are currently available
 - Amber
-  small Java features + pattern matching
+  small Java features switch expression + instanceof pattern + records (pattern matching in the future)
 - Valhalla
-  value types and reified generics
+  inline types (and reified generics in the future)
 - Loom
-  coroutine in Java
+  lightweight (virtual) thread that acts as coroutine
   
 All builds are available in the release section, don't use in production, use at your own risk.
