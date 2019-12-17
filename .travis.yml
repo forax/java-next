@@ -2,7 +2,7 @@
 sudo: true
 
 language: java
-jdk: openjdk13
+jdk: openjdk14
 
 before_install:
   - unset _JAVA_OPTIONS
