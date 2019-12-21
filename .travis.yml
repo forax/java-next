@@ -26,10 +26,10 @@ env:
     REPOSITORY="loom"
     ARTIFACT="jdk-14-loom"
     SCM="git"
-  - BRANCH="records"
+  - BRANCH="sealed-types"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-14-record"
+    ARTIFACT="jdk-14-sealed"
     SCM="hg"
 
 before_install:
