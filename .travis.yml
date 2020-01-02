@@ -1,4 +1,4 @@
-# 55
+# 56
 sudo: true
 
 language: java
@@ -20,16 +20,16 @@ env:
   - BRANCH="nestmates"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
-    ARTIFACT="jdk-14-nestmates"
+    ARTIFACT="jdk-15-nestmates"
     SCM="hg"
   - BRANCH="fibers"
     REPOSITORY="loom"
-    ARTIFACT="jdk-14-loom"
+    ARTIFACT="jdk-15-loom"
     SCM="git"
   - BRANCH="sealed-types"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-14-sealed"
+    ARTIFACT="jdk-15-sealed"
     SCM="hg"
 
 before_install:
