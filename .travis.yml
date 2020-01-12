@@ -57,9 +57,9 @@ install:
   - if [[ "$SCM" == "git" ]]; then cd ..                                                                                        ; fi
 
 script:
-  - cat /proc/cpuinfo
   - chmod u+x ./build.sh
   - ./build.sh
+  - cat /home/travis/build/forax/java-next/loom/make/hs_err_*
 
 before_deploy:
   - tar zcvf $ARTIFACT-$TRAVIS_OS_NAME.tar.gz $ARTIFACT
