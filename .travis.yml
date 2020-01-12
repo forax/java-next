@@ -57,6 +57,7 @@ install:
   - if [[ "$SCM" == "git" ]]; then cd ..                                                                                        ; fi
 
 script:
+  - cat /proc/cpuinfo
   - chmod u+x ./build.sh
   - ./build.sh
 
