@@ -12,6 +12,11 @@ os:
   - osx
 
 env:
+  - BRANCH="default"
+    HG_REPOSITORY="jdk"
+    REPOSITORY="jdk"
+    ARTIFACT="jdk-15"
+    SCM="hg"
   - BRANCH="lworld"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
