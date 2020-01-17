@@ -52,7 +52,6 @@ install:
   - if [[ "$SCM" == "git" ]]; then cd ..                                                                                        ; fi
 
 script:
-  - export JAVA_TOOL_OPTIONS="-XX:+UnlockDiagnosticVMOptions -XX:DisableIntrinsic=_bigIntegerLeftShiftWorker,_bigIntegerRightShiftWorke -XX:CompileCommand=dontinline,java.math.BigInteger::shiftLeft -XX:CompileCommand=dontinline,java.math.BigInteger::shiftRight"
   - chmod u+x ./build.sh
   - ./build.sh
 #  - cat /home/travis/build/forax/java-next/loom/make/hs_err_*
