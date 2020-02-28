@@ -18,7 +18,7 @@ env:
     ARTIFACT="jdk-15-lworld"
     SCM="hg"
   - BRANCH="foreign-memaccess"
-    REPOSITORY="panama"
+    REPOSITORY="panama-foreign"
     ARTIFACT="jdk-15-foreign"
     SCM="git"
   - BRANCH="nestmates"
