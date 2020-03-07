@@ -2,10 +2,11 @@
 sudo: true
 
 language: java
-jdk: openjdk14
 
 before_install:
   - unset _JAVA_OPTIONS
+  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
+  - source ./install-jdk.sh --feature 14
 
 os:
   - linux
