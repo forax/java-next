@@ -9,10 +9,9 @@ os:
 
 env:
   - BRANCH="lworld"
-    HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-15-lworld"
-    SCM="hg"
+    SCM="git"
   - BRANCH="vectorIntrinsics"
     HG_REPOSITORY="panama"
     REPOSITORY="dev"
