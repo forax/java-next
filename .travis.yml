@@ -30,10 +30,10 @@ env:
     REPOSITORY="loom"
     ARTIFACT="jdk-15-loom"
     SCM="git"
-  - BRANCH="sealed-types"
+  - BRANCH="patterns-stage-2"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
-    ARTIFACT="jdk-15-sealed"
+    ARTIFACT="jdk-15-pattern"
     SCM="hg"
 
 before_install:
