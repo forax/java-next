@@ -51,15 +51,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libffi-dev              ; fi
   
 install:
-  - if [[ "$SCM" == "hg" ]]; then export LATEST_COMMIT=`hg id -r $BRANCH http://hg.openjdk.java.net/$HG_REPOSITORY/$REPOSITORY` ; fi
-  - if [[ "$SCM" == "hg" ]]; then echo $LATEST_COMMIT                                                                           ; fi
-  - if [[ "$SCM" == "hg" ]]; then chmod u+x ./install.sh                                                                        ; fi
-  - if [[ "$SCM" == "hg" ]]; then ./install.sh                                                                                  ; fi
-  - if [[ "$SCM" == "git" ]]; then git clone https://github.com/openjdk/$REPOSITORY.git                                         ; fi
-  - if [[ "$SCM" == "git" ]]; then cd $REPOSITORY                                                                               ; fi
-  - if [[ "$SCM" == "git" ]]; then git checkout $BRANCH                                                                         ; fi
-  - if [[ "$SCM" == "git" ]]; then export LATEST_COMMIT=`git describe --tags`                                                   ; fi
-  - if [[ "$SCM" == "git" ]]; then cd ..                                                                                        ; fi
+  - source ./install-$SCM.sh
 
 script:
   - chmod u+x ./build.sh
