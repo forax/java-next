@@ -1,5 +1,6 @@
 # 92
 
+dist: bionic
 language: java
 
 os:
