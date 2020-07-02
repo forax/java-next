@@ -8,6 +8,7 @@ os:
 
 env:
   - BRANCH="lworld"
+    HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-16-lworld"
     SCM="git"
@@ -16,29 +17,22 @@ env:
     REPOSITORY="dev"
     ARTIFACT="jdk-16-vector"
     SCM="hg"
-#  - BRANCH="foreign-memaccess"
-#    REPOSITORY="panama-foreign"
-#    ARTIFACT="jdk-16-foreign"
-#    SCM="git"
   - BRANCH="nestmates"
     HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
     ARTIFACT="jdk-16-nestmates"
-    SCM="hg"
   - BRANCH="fibers"
+    HG_REPOSITORY="loom"
     REPOSITORY="loom"
     ARTIFACT="jdk-16-loom"
-    SCM="git"
   - BRANCH="sealed-types"
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
     ARTIFACT="jdk-16-sealed"
-    SCM="hg"
   - BRANCH="patterns-stage-2" 
     HG_REPOSITORY="amber"
     REPOSITORY="amber"
     ARTIFACT="jdk-16-pattern"
-    SCM="hg"
 
 before_install:
   - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
@@ -49,7 +43,9 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libx11-dev libxext-dev libxrender-dev libxtst-dev libxt-dev libxrandr-dev   ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libasound2-dev          ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libffi-dev              ; fi
-  
+  - if [[ "$TRAVIS_OS_NAME" == "linux" -a -z "$SCM"]]; then export SCM="git"                 ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" -a -z "$SCM"]]; then export SCM="hg"                    ; fi
+
 install:
   - source ./install-$SCM.sh
 

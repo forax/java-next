@@ -1,8 +1,5 @@
 #!/bin/bash
 
-## env
-[ -z "$JAVA_HOME" ] && export JAVA_HOME=/usr/jdk/jdk-11
-
 ## build the JDK
 cd $REPOSITORY
 bash configure --with-boot-jdk=$JAVA_HOME \
