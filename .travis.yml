@@ -43,8 +43,8 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libx11-dev libxext-dev libxrender-dev libxtst-dev libxt-dev libxrandr-dev   ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libasound2-dev          ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libffi-dev              ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" -a -z "$SCM"]]; then export SCM="git"                 ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" -a -z "$SCM"]]; then export SCM="hg"                    ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" -a -z "$SCM" ]]; then export SCM="git"                ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" -a -z "$SCM" ]]; then export SCM="hg"                   ; fi
 
 install:
   - source ./install-$SCM.sh
