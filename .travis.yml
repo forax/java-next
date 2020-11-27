@@ -1,4 +1,4 @@
-# 97
+# 98
 
 language: java
 
@@ -17,7 +17,7 @@ addons:
 
 os:
   - linux
-  - osx
+#  - osx
 
 env:
   - BRANCH="lworld"
@@ -30,10 +30,6 @@ env:
     REPOSITORY="dev"
     ARTIFACT="jdk-16-vector"
     SCM="hg"
-  - BRANCH="nestmates"
-    HG_REPOSITORY="valhalla"
-    REPOSITORY="valhalla"
-    ARTIFACT="jdk-16-nestmates"
   - BRANCH="fibers"
     HG_REPOSITORY="loom"
     REPOSITORY="loom"
