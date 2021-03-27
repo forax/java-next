@@ -21,31 +21,25 @@ os:
 
 env:
   - BRANCH="lworld"
-    HG_REPOSITORY="valhalla"
     REPOSITORY="valhalla"
-    ARTIFACT="jdk-16-lworld"
+    ARTIFACT="jdk-17-lworld"
     SCM="git"
-  - BRANCH="vectorIntrinsics"
-    HG_REPOSITORY="panama"
-    REPOSITORY="dev"
-    ARTIFACT="jdk-16-vector"
-    SCM="hg"
+  - BRANCH="foreign-jextract"
+    REPOSITORY="panama-foreign"
+    ARTIFACT="jdk-17-foreign"
+    SCM="git"
+  - BRANCH="master"
+    REPOSITORY="panama-vector"
+    ARTIFACT="jdk-17-vector"
+    SCM="git"
   - BRANCH="fibers"
-    HG_REPOSITORY="loom"
     REPOSITORY="loom"
-    ARTIFACT="jdk-16-loom"
-  - BRANCH="sealed-types"
-    HG_REPOSITORY="amber"
-    REPOSITORY="amber"
-    ARTIFACT="jdk-16-sealed"
-  - BRANCH="patterns-stage-2" 
-    HG_REPOSITORY="amber"
-    REPOSITORY="amber"
-    ARTIFACT="jdk-16-pattern"
+    ARTIFACT="jdk-17-loom"
+    SCM="git"
 
 before_install:
   - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
-  - source ./install-jdk.sh --feature 15
+  - source ./install-jdk.sh --feature 16
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then if [[ -z "$SCM" ]]; then export SCM="git" ; fi ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then if [[ -z "$SCM" ]]; then export SCM="hg" ; fi ; fi
 
